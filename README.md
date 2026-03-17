@@ -1,17 +1,20 @@
 # GAS-LEAK-DETECTION-SYSTEM-USING-GAS-SENSOR
 
 ## Aim:
-	To measure the air quality using Gas Sensor  MQ-2 with Arduino UNO Board/ESP-32 using Tinker CAD.
+To measure the air quality using Gas Sensor  MQ-2 with Arduino UNO Board/ESP-32 using Tinker CAD.
 
 ## Hardware / Software Tools required:
-	PC/ Laptop with Internet connection
+PC/ Laptop with Internet connection
   Tinker CAD tool (Online)
 	Arduino UNO Board/ESP-32
   Gas sensor (MQ-2)
 	
 ## Circuit Diagram:
 
- <img width="1332" height="582" alt="Screenshot 2025-11-04 193717" src="https://github.com/user-attachments/assets/f79533fa-4c3e-421f-956b-6c1deda07208" />
+ 
+
+<img width="1436" height="726" alt="image" src="https://github.com/user-attachments/assets/fed19c04-f974-43fe-91c4-da98cb07fd99" />
+
 
 
 ## Theory :
@@ -80,10 +83,10 @@ void loop() {
     digitalWrite(13,LOW);
     lcd.setCursor(00,1);
     lcd.print("DANGER");
-  }else if(gas_data > 700){
-    digitalWrite(6,HIGH);
-  	delay(100);
+  }else if(gas_data > 350){
     digitalWrite(6,LOW);
+  	delay(100);
+    digitalWrite(6,HIGH);
     lcd.setCursor(00,1);
     lcd.print("WARNING");
   }else {
@@ -95,10 +98,12 @@ void loop() {
   delay(100);
   lcd.clear();
 }
+
 ```
-
 ## Output:
-   <img width="1333" height="574" alt="Screenshot 2025-11-04 193704" src="https://github.com/user-attachments/assets/7d37290e-413d-4e15-a6ab-a45cd6ef4e40" />
-## Result:
-The quality of air is measured using Gas Sensor MQ-2 with Arduino UNO Board/ESP-32 using Tinker CAD Verified Successfully.
 
+   <img width="1919" height="972" alt="Screenshot 2025-10-28 161555" src="https://github.com/user-attachments/assets/081d96a6-b8e8-4bf6-a00f-a51d1d64d773" />
+
+
+## Result:
+The quality of air is measured using Gas Sensor MQ-2 with Arduino UNO Board/ESP-32 using Tinker CAD Verified Successfully
